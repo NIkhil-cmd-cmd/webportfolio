@@ -13,9 +13,9 @@ const person = {
 }
 
 const newsletter = {
-    display: true,
-    title: <>Subscribe to {person.firstName}'s Newsletter</>,
-    description: <>I write about AI, machine learning, and the intersection of technology and healthcare.</>
+    display: false,
+    title: <></>,
+    description: <></>
 }
 
 const social = [
@@ -37,208 +37,352 @@ const social = [
 ]
 
 const home = {
-    headline: 'AI Engineer & Researcher',
-    subline: 'Building innovative solutions at the intersection of AI and healthcare',
-    description: `Student researcher and AI engineer focused on developing cutting-edge solutions in healthcare technology. Currently working on projects involving brain-computer interfaces and machine learning applications.`
+    label: 'Home',
+    title: `${person.name}'s Portfolio`,
+    description: `Portfolio website showcasing my work as a ${person.role}`,
+    headline: <>Hi, I'm Nikhil 👋</>,
+    subline: <>this is my personal portfolio website.</>
 }
 
 const about = {
     label: 'About',
-    title: 'About me',
+    title: 'About me ->', 
     description: `Meet ${person.name}, ${person.role} from ${person.location}`,
     tableOfContent: {
         display: true,
         subItems: false
     },
     avatar: {
-        display: true
+        display: false
     },
     calendar: {
-        display: true,
-        link: 'https://cal.com'
+        display: false,
+        link: 'https://cal.com/nikhil-krishnaswamy'
     },
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</>
+        description: <>Student researcher and AI engineer focused on developing innovative solutions in healthcare technology.</>
     },
     work: {
-        display: true, // set to false to hide this section
+        display: true,
         title: 'Work Experience',
         experiences: [
             {
-                company: 'FLY',
-                timeframe: '2022 - Present',
-                role: 'Senior Design Engineer',
+                company: 'Solo Intern',
+                timeframe: 'Sep 2024 - Present',
+                role: 'AI/ML Engineer',
                 achievements: [
-                    <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
-                    <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
+                    <>Pioneered apps and models for on-device AI, built Healthify iOS wellbeing app</>,
+                    <>Ran clinical tests of the app at Johns Hopkins University</>,
+                    <>Developed innovative healthcare technology solutions</>
                 ],
-                images: [ // optional: leave the array empty if you don't want to display images
-                    {
-                        src: '/images/projects/project-01/cover-01.jpg',
-                        alt: 'Once UI Project',
-                        width: 16,
-                        height: 9
-                    }
-                ]
+                images: []
             },
             {
-                company: 'Creativ3',
-                timeframe: '2018 - 2022',
-                role: 'Lead Designer',
+                company: 'UC Santa Cruz',
+                timeframe: 'Jun 2024 - Aug 2024',
+                role: 'Lab Intern',
                 achievements: [
-                    <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
-                    <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
+                    <>Conducted EEG research on tDCS stimulation effects on speech production</>,
+                    <>Processed and analyzed EEG data, generated ERP graphs</>,
+                    <>Gained hands-on experience with electroencephalography (EEG)</>
                 ],
-                images: [ ]
+                images: []
+            },
+            {
+                company: 'Alliance AI4Health',
+                timeframe: 'Jan 2024 - Present',
+                role: 'Founder & CEO',
+                achievements: [
+                    <>Founded global non-profit fostering ethical AI solutions in healthcare</>,
+                    <>Hosted hackathon with 325 participants and multiple sponsor partnerships</>,
+                    <>Led 8-week Python/Java bootcamp for 100+ students globally</>
+                ],
+                images: []
+            },
+            {
+                company: 'AI Pioneers Club',
+                timeframe: 'Mar 2023 - Present',
+                role: 'Founder & President',
+                achievements: [
+                    <>Established AI club with 50+ active members at Cupertino High School</>,
+                    <>Partnered with ML@Berkeley for cutting-edge AI research exposure</>,
+                    <>Conducted regular workshops and hands-on learning projects</>
+                ],
+                images: []
+            },
+            {
+                company: 'Stanford University',
+                timeframe: 'Jun 2023 - Present',
+                role: 'Research Intern',
+                achievements: [
+                    <>Published research on ML-based seizure detection using EEG data</>,
+                    <>Working with post-doc on novel TVB research for seizure suppression</>,
+                    <>Developed innovative brain stimulation analysis approaches</>
+                ],
+                images: []
+            },
+            {
+                company: 'Share-On',
+                timeframe: 'Mar 2024 - Present',
+                role: 'Co-founder & CTO',
+                achievements: [
+                    <>Developed mental health platform with AI chatbot for teens</>,
+                    <>Grew platform to 5,000+ users in 3 months</>,
+                    <>Awarded BEEP and i.invest grants totaling $1,000</>
+                ],
+                images: []
+            },
+            {
+                company: 'Nextsense',
+                timeframe: 'Jan 2024 - May 2024',
+                role: 'Machine Learning Intern',
+                achievements: [
+                    <>Implemented DSP techniques and trained ML models on EEG data</>,
+                    <>Contributed to advancing in-ear EEG hardware neurotechnology</>,
+                    <>Applied signal processing expertise to neurological data</>
+                ],
+                images: []
+            },
+            {
+                company: 'Awards',
+                timeframe: '2020 - 2024',
+                role: 'Academic & Professional Recognition',
+                achievements: [
+                    <>1st Place, School Photographers of America Student Competition</>,
+                    <>i.Invest National Entrepreneurship Pitch Competition Winner - $500 grant</>,
+                    <>Photography Superior Award, JEA NSMC</>,
+                    <>Gold Presidential Volunteer Service Award - 300+ hours</>,
+                    <>Young Artist Platinum Award for Photography</>,
+                    <>Winner of ImpactHacks and Hack4Earth - Brain Tumor Classification CNN</>,
+                    <>FutureHacks5 Most Unique Award - Mental Health Chatbot</>,
+                    <>4x Award of Excellence, PTA Reflections for Photography</>,
+                    <>MVP, JV Tennis Team - Doubles 1</>
+                ],
+                images: []
             }
         ]
     },
     studies: {
-        display: true, // set to false to hide this section
-        title: 'Studies',
+        display: true,
+        title: 'Education',
         institutions: [
             {
-                name: 'University of Jakarta',
-                description: <>Studied software engineering.</>,
+                name: 'Cupertino High School',
+                description: <>High School Diploma (2022 - 2026), GPA: 4.0 | AP Scores: Calculus AB (5), Precalculus (5), Physics One (5), CS Principles (5), CS Applications (4)</>,
             },
             {
-                name: 'Build the Future',
-                description: <>Studied online marketing and personal branding.</>,
+                name: 'De Anza College',
+                description: <>Concurrent Enrollment (2023 - Present) | Entrepreneurship, Business, iOS Development, Python, Java, Physics, Digital Photography</>,
+            },
+            {
+                name: 'UC Scout',
+                description: <>AP Computer Science & Psychology (2022 - Present)</>,
+            },
+            {
+                name: 'UCLA',
+                description: <>Principles and Practices of Computing (2023)</>,
             }
         ]
     },
     technical: {
-        display: true, // set to false to hide this section
-        title: 'Technical skills',
+        display: true,
+        title: 'Technical Skills',
         skills: [
             {
-                title: 'Figma',
-                description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-                images: [
-                    {
-                        src: '/images/projects/project-01/cover-02.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/project-01/cover-03.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                ]
+                title: 'Programming',
+                description: <>Proficient in Python, Java, Swift/Objective-C, HTML/CSS, DSP</>,
+                images: []
             },
             {
-                title: 'Next.js',
-                description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-                images: [
-                    {
-                        src: '/images/projects/project-01/cover-04.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                ]
+                title: 'Machine Learning',
+                description: <>Experience with TensorFlow, OpenAI, Sklearn, RAG, Embeddings, LLMs, OpenCV</>,
+                images: []
+            },
+            {
+                title: 'Data Science',
+                description: <>Skilled in Matplotlib, Numpy, Pandas, DSP, The Virtual Brain</>,
+                images: []
+            },
+            {
+                title: 'Design',
+                description: <>Expertise in Photography, Adobe Suite (Lightroom, Photoshop, Premiere Pro, After Effects, Illustrator), Linearity Curve, Figma</>,
+                images: []
             }
         ]
     }
 }
 
 const blog = {
-    label: 'Blog',
-    title: 'Writing about design and tech...',
-    description: `Read what ${person.name} has been up to recently`
-    // Create new blog posts by adding a new .mdx file to app/blog/posts
-    // All posts will be listed on the /blog route
+    label: '',
+    display: false,
+    title: '',
+    description: '',
+    icon: ''
 }
 
 const work = {
     label: 'Work',
     title: 'My projects',
-    description: `Design and dev projects by ${person.name}`
-    // Create new project pages by adding a new .mdx file to app/blog/posts
-    // All projects will be listed on the /home and /work routes
+    description: `AI and healthcare projects by ${person.name}`,
+    items: [
+        {
+            title: 'Healthify',
+            description: 'iOS personal wellbeing app with on-device AI, clinically tested at Johns Hopkins',
+            image: '/images/projects/healthify.jpg',
+            link: '/work/healthify'
+        },
+        {
+            title: 'Seizure Detection ML',
+            description: 'EEG-based supervised learning models for seizure prediction',
+            image: '/images/projects/seizure.jpg',
+            link: '/work/seizure-detection'
+        },
+        {
+            title: 'Share-On Platform',
+            description: 'Mental health platform with AI chatbot for teens',
+            image: '/images/projects/share-on.jpg',
+            link: '/work/share-on'
+        }
+    ]
 }
 
 const gallery = {
-    label: 'Gallery',
+    label: 'Photography',
     title: 'My photo gallery',
     description: `A photo collection by ${person.name}`,
-    // Images from https://pexels.com
     images: [
         { 
-            src: '/images/gallery/img-01.jpg', 
-            alt: 'image',
+            src: '/images/gallery/File 27.jpg', 
+            alt: 'image 27',
             orientation: 'vertical'
         },
         { 
-            src: '/images/gallery/img-02.jpg', 
-            alt: 'image',
+            src: '/images/gallery/File 26.jpg', 
+            alt: 'image 26',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-03.jpg', 
-            alt: 'image',
+            src: '/images/gallery/File 25.jpg', 
+            alt: 'image 25',
             orientation: 'vertical'
         },
         { 
-            src: '/images/gallery/img-04.jpg', 
-            alt: 'image',
+            src: '/images/gallery/File 24.jpg', 
+            alt: 'image 24',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-05.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-06.jpg', 
-            alt: 'image',
+            src: '/images/gallery/File 23.jpg', 
+            alt: 'image 23',
             orientation: 'vertical'
         },
         { 
-            src: '/images/gallery/img-07.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-08.jpg', 
-            alt: 'image',
+            src: '/images/gallery/File 21.jpg', 
+            alt: 'image 21',
             orientation: 'vertical'
         },
         { 
-            src: '/images/gallery/img-09.jpg', 
-            alt: 'image',
+            src: '/images/gallery/File 20.jpg', 
+            alt: 'image 20',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-10.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-11.jpg', 
-            alt: 'image',
+            src: '/images/gallery/File 19.jpg', 
+            alt: 'image 19',
             orientation: 'vertical'
         },
         { 
-            src: '/images/gallery/img-12.jpg', 
-            alt: 'image',
+            src: '/images/gallery/File 18.jpg', 
+            alt: 'image 18',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-13.jpg', 
-            alt: 'image',
+            src: '/images/gallery/File 17.jpg', 
+            alt: 'image 17',
+            orientation: 'vertical'
+        },
+        { 
+            src: '/images/gallery/File 16.jpg', 
+            alt: 'image 16',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-14.jpg', 
-            alt: 'image',
+            src: '/images/gallery/File 15.jpg', 
+            alt: 'image 15',
+            orientation: 'vertical'
+        },
+        { 
+            src: '/images/gallery/File 14.jpg', 
+            alt: 'image 14',
             orientation: 'horizontal'
         },
+        { 
+            src: '/images/gallery/File 13.jpg', 
+            alt: 'image 13',
+            orientation: 'vertical'
+        },
+        { 
+            src: '/images/gallery/File 12.jpg', 
+            alt: 'image 12',
+            orientation: 'horizontal'
+        },
+        { 
+            src: '/images/gallery/File 11.jpg', 
+            alt: 'image 11',
+            orientation: 'vertical'
+        },
+        { 
+            src: '/images/gallery/File 10.jpg', 
+            alt: 'image 10',
+            orientation: 'horizontal'
+        },
+        { 
+            src: '/images/gallery/File 9.jpg', 
+            alt: 'image 9',
+            orientation: 'vertical'
+        },
+        { 
+            src: '/images/gallery/File 8.jpg', 
+            alt: 'image 8',
+            orientation: 'horizontal'
+        },
+        { 
+            src: '/images/gallery/File 7.jpg', 
+            alt: 'image 7',
+            orientation: 'vertical'
+        },
+        { 
+            src: '/images/gallery/File 6.jpg', 
+            alt: 'image 6',
+            orientation: 'horizontal'
+        },
+        { 
+            src: '/images/gallery/File 5.jpg', 
+            alt: 'image 5',
+            orientation: 'vertical'
+        },
+        { 
+            src: '/images/gallery/File 4.jpg', 
+            alt: 'image 4',
+            orientation: 'horizontal'
+        },
+        { 
+            src: '/images/gallery/File 3.jpg', 
+            alt: 'image 3',
+            orientation: 'vertical'
+        },
+        { 
+            src: '/images/gallery/File 2.jpg', 
+            alt: 'image 2',
+            orientation: 'horizontal'
+        },
+        { 
+            src: '/images/gallery/File 1.jpg', 
+            alt: 'image 1',
+            orientation: 'vertical'
+        }
     ]
 }
 

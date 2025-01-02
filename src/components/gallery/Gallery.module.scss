@@ -1,5 +1,6 @@
 .masonryGrid {
     display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
     margin-left: calc(-1 * var(--static-space-16));
     width: 100%;
 }
@@ -7,8 +8,22 @@
 .masonryGridColumn {
     padding-left: var(--static-space-16);
     background-clip: padding-box;
+    flex: 1 1 200px; /* Allow columns to grow and shrink */
 }
 
 .gridItem {
     margin-bottom: var(--static-space-16);
+    width: 100%; /* Full width for grid items */
+    cursor: pointer; /* Indicate that items are clickable */
+}
+
+.gridItem img {
+    width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: add some styling */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.gridItem img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
 }
