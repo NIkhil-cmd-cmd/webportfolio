@@ -1,29 +1,53 @@
-"use client"; // Marking this component as a Client Component
-
-import { Flex, Modal } from "@/once-ui/components";
+import { Flex } from "@/once-ui/components";
 import MasonryGrid from "@/components/gallery/MasonryGrid";
 import { baseURL, renderContent } from "@/app/resources";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+
+export async function generateMetadata(
+	{params: {locale}}: { params: { locale: string }}
+) {
+
+	const t = await getTranslations();
+	const { gallery } = renderContent(t);
+
+	const title = gallery.title;
+	const description = gallery.description;
+	const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
+
+	return {
+		title,
+		description,
+		openGraph: {
+			title,
+			description,
+			type: 'website',
+			url: `https://${baseURL}/${locale}/gallery`,
+			images: [
+				{
+					url: ogImage,
+					alt: title,
+				},
+			],
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title,
+			description,
+			images: [ogImage],
+		},
+	};
+}
 
 export default function Gallery(
-	{ params: { locale }}: { params: { locale: string }}
+	{ params: {locale}}: { params: { locale: string }}
 ) {
+	unstable_setRequestLocale(locale);
 	const t = useTranslations();
 	const { gallery, person } = renderContent(t);
-	const [selectedImage, setSelectedImage] = useState(null);
-
-	const handleImageClick = (image: { src: string; alt: string }) => {
-		setSelectedImage(image);
-	};
-
-	const handleCloseModal = () => {
-		setSelectedImage(null);
-	};
-
-	return (
-		<Flex fillWidth>
-			<script
+    return (
+        <Flex fillWidth>
+            <script
 				type="application/ld+json"
 				suppressHydrationWarning
 				dangerouslySetInnerHTML={{
@@ -49,13 +73,7 @@ export default function Gallery(
 					}),
 				}}
 			/>
-			<MasonryGrid onImageClick={handleImageClick} />
-			{selectedImage && (
-				<Modal onClose={handleCloseModal}>
-					<img src={`${baseURL}${selectedImage.src}`} alt={selectedImage.alt} />
-					<button onClick={handleCloseModal}>Close</button>
-				</Modal>
-			)}
-		</Flex>
-	);
+            <MasonryGrid/>
+        </Flex>
+    );
 }
