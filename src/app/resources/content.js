@@ -261,7 +261,7 @@ const gallery = {
         { 
             src: '/images/gallery/File 26.jpg', 
             alt: 'image 26',
-            orientation: 'horizontal'
+            orientation: 'vertical'
         },
         { 
             src: '/images/gallery/File 25.jpg', 
@@ -271,7 +271,7 @@ const gallery = {
         { 
             src: '/images/gallery/File 24.jpg', 
             alt: 'image 24',
-            orientation: 'horizontal'
+            orientation: 'vertical'
         },
         { 
             src: '/images/gallery/File 23.jpg', 
@@ -286,7 +286,7 @@ const gallery = {
         { 
             src: '/images/gallery/File 20.jpg', 
             alt: 'image 20',
-            orientation: 'horizontal'
+            orientation: 'vertical'
         },
         { 
             src: '/images/gallery/File 19.jpg', 
@@ -296,7 +296,7 @@ const gallery = {
         { 
             src: '/images/gallery/File 18.jpg', 
             alt: 'image 18',
-            orientation: 'horizontal'
+            orientation: 'vertical'
         },
         { 
             src: '/images/gallery/File 17.jpg', 
@@ -306,7 +306,7 @@ const gallery = {
         { 
             src: '/images/gallery/File 16.jpg', 
             alt: 'image 16',
-            orientation: 'horizontal'
+            orientation: 'vertical'
         },
         { 
             src: '/images/gallery/File 15.jpg', 
@@ -316,7 +316,7 @@ const gallery = {
         { 
             src: '/images/gallery/File 14.jpg', 
             alt: 'image 14',
-            orientation: 'horizontal'
+            orientation: 'vertical'
         },
         { 
             src: '/images/gallery/File 13.jpg', 
@@ -326,7 +326,7 @@ const gallery = {
         { 
             src: '/images/gallery/File 12.jpg', 
             alt: 'image 12',
-            orientation: 'horizontal'
+            orientation: 'vertical'
         },
         { 
             src: '/images/gallery/File 11.jpg', 
@@ -336,7 +336,7 @@ const gallery = {
         { 
             src: '/images/gallery/File 10.jpg', 
             alt: 'image 10',
-            orientation: 'horizontal'
+            orientation: 'vertical'
         },
         { 
             src: '/images/gallery/File 9.jpg', 
@@ -346,7 +346,7 @@ const gallery = {
         { 
             src: '/images/gallery/File 8.jpg', 
             alt: 'image 8',
-            orientation: 'horizontal'
+            orientation: 'vertical'
         },
         { 
             src: '/images/gallery/File 7.jpg', 
@@ -356,7 +356,7 @@ const gallery = {
         { 
             src: '/images/gallery/File 6.jpg', 
             alt: 'image 6',
-            orientation: 'horizontal'
+            orientation: 'vertical'
         },
         { 
             src: '/images/gallery/File 5.jpg', 
@@ -366,7 +366,7 @@ const gallery = {
         { 
             src: '/images/gallery/File 4.jpg', 
             alt: 'image 4',
-            orientation: 'horizontal'
+            orientation: 'vertical'
         },
         { 
             src: '/images/gallery/File 3.jpg', 
@@ -376,7 +376,7 @@ const gallery = {
         { 
             src: '/images/gallery/File 2.jpg', 
             alt: 'image 2',
-            orientation: 'horizontal'
+            orientation: 'vertical'
         },
         { 
             src: '/images/gallery/File 1.jpg', 
