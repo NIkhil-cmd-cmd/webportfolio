@@ -362,7 +362,7 @@ const gallery = {
             src: '/images/gallery/File 5.jpg', 
             alt: 'image 5',
             orientation: 'vertical'
-        },
+        }, 
         { 
             src: '/images/gallery/File 4.jpg', 
             alt: 'image 4',
