@@ -51,7 +51,7 @@ export default function Home(
 	return (
 		<Flex
 			maxWidth="m" fillWidth gap="xl"
-			direction="column" alignItems="center">
+			direction="column" alignItems="flex-start">
 			<script
 				type="application/ld+json"
 				suppressHydrationWarning
